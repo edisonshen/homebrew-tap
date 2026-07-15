@@ -5,23 +5,23 @@
 class Fleet < Formula
   desc "Open-source command console for running many Claude Code agents in parallel."
   homepage "https://github.com/edisonshen/fleet"
-  version "0.15.0"
+  version "0.16.0"
   license "MIT"
 
   depends_on "tmux" => :required
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/edisonshen/fleet/releases/download/v0.15.0/fleet_0.15.0_darwin_amd64.tar.gz"
-      sha256 "947359b178129d553da33498d1770e0df325bd7996f6105eed8756c6fec3e0b2"
+      url "https://github.com/edisonshen/fleet/releases/download/v0.16.0/fleet_0.16.0_darwin_amd64.tar.gz"
+      sha256 "0e8a4ceea6266652082a363818fe9d0357ac67d924e534348c786cec4a6610bb"
 
       define_method(:install) do
         bin.install "fleet"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/edisonshen/fleet/releases/download/v0.15.0/fleet_0.15.0_darwin_arm64.tar.gz"
-      sha256 "febe1108045a59521fef25912c43d92cf305b9e3d98ff04c877225c3b69ab0d0"
+      url "https://github.com/edisonshen/fleet/releases/download/v0.16.0/fleet_0.16.0_darwin_arm64.tar.gz"
+      sha256 "4db6231dc6df92d0ced369276d01a720b563038f2b83c51decbe28cbb33f81e7"
 
       define_method(:install) do
         bin.install "fleet"
@@ -31,15 +31,15 @@ class Fleet < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edisonshen/fleet/releases/download/v0.15.0/fleet_0.15.0_linux_amd64.tar.gz"
-      sha256 "72817d393a211bc5c81277a87f3f38c308a7c59ed30d17126f05972767e4869e"
+      url "https://github.com/edisonshen/fleet/releases/download/v0.16.0/fleet_0.16.0_linux_amd64.tar.gz"
+      sha256 "dbad22196b334090e8bbe7f612a172804d8dc53ca00ee4ac6a187025b283018f"
       define_method(:install) do
         bin.install "fleet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edisonshen/fleet/releases/download/v0.15.0/fleet_0.15.0_linux_arm64.tar.gz"
-      sha256 "1479ab65fe83f8aaca9b43cdba49e40acca9df7fab58f76ca57807409ed50e87"
+      url "https://github.com/edisonshen/fleet/releases/download/v0.16.0/fleet_0.16.0_linux_arm64.tar.gz"
+      sha256 "4501aeed8008012f7aceea5de9c7c711adac69dd58370677544e2d9166a21b6c"
       define_method(:install) do
         bin.install "fleet"
       end
